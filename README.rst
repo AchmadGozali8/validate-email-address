@@ -1,3 +1,5 @@
+|build|
+
 ==============
 Validate_email
 ==============
@@ -48,6 +50,5 @@ Check if the host has SMTP Server and the email really exists::
     is_valid = validate_email('example@example.com',verify=True)
 
 
-TODOs and BUGS
-==============
-See: http://github.com/syrusakbary/validate_email/issues
+.. |build| image:: https://travis-ci.org/heropunch/validate-email.svg
+   :target: https://travis-ci.org/heropunch/validate-email

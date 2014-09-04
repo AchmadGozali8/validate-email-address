@@ -1,0 +1,18 @@
+language: python
+python:
+    - "pypy"
+    - "pypy3"
+    - "2.7"
+    - "3.2"
+    - "3.3"
+    - "3.4"
+install:
+    - pip install PyDNS
+    - pip install .
+    - pip install nose coverage
+script:
+    - nosetests --with-coverage --cover-package=validate_email
+    - coverage report -m
+after_success:
+    - pip install coveralls
+    - coveralls

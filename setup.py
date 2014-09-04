@@ -1,15 +1,17 @@
-from setuptools import setup, find_packages
+# -*- coding: utf-8 -*-
 
-setup(name='validate_email',
-      version = '1.2',
-      download_url = 'git@github.com:syrusakbary/validate_email.git',
-      py_modules = ('validate_email',),
-      author = 'Syrus Akbary',
-      author_email = 'me@syrusakbary.com',
-      description = 'Validate_email verify if an email address is valid and really exists.',
+from setuptools import setup
+
+setup(name='validate-email',
+      version='1.2',
+      download_url='https://github.com/heropunch/validate-email.git',
+      py_modules=('validate_email',),
+      author='Carlos Killpack',
+      author_email='carlos.killpack@rocketmail.com',
+      description='Verify if an email address is valid and really exists.',
       long_description=open('README.rst').read(),
-      keywords = 'email validation verification mx verify',
-      url = 'http://github.com/syrusakbary/validate_email',
+      keywords='email validation verification mx verify',
+      url='http://github.com/heropunch/validate-email',
       license = 'LGPLv3',
       classifiers=('Topic :: Communications :: Email',
                    'Topic :: Utilities',
