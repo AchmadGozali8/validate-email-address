@@ -1,10 +1,10 @@
 |build|
 
 ==============
-Validate_email
+validate-email
 ==============
 
-Validate_email is a package for Python that check if an email is valid, properly formatted and really exists.
+`validate-email` is a package for Python that check if an email is valid, properly formatted and really exists.
 
 
 
@@ -13,10 +13,11 @@ INSTALLATION
 
 First, you must do::
 
-    pip install validate_email
+    pip install validate-email
+
 
 Extra
-------
+-----
 
 For check the domain mx and verify email exits you must have the `pyDNS` package installed::
 
@@ -28,8 +29,9 @@ USAGE
 
 Basic usage::
 
-    from validate_email import validate_email
-    is_valid = validate_email('example@example.com')
+    >>> from validate_email import validate_email
+    >>> validate_email('example@example.com')
+    True
 
 
 Checking domain has SMTP Server
@@ -37,8 +39,9 @@ Checking domain has SMTP Server
 
 Check if the host has SMTP Server::
 
-    from validate_email import validate_email
-    is_valid = validate_email('example@example.com',check_mx=True)
+    >>> from validate_email import validate_email
+    >>> validate_email('example@sharklasers.com', check_mx=True)
+    True
 
 
 Verify email exists
@@ -46,8 +49,9 @@ Verify email exists
 
 Check if the host has SMTP Server and the email really exists::
 
-    from validate_email import validate_email
-    is_valid = validate_email('example@example.com',verify=True)
+    >>> from validate_email import validate_email
+    >>> validate_email('example@sharklasers.com', verify=True)
+    True
 
 
 .. |build| image:: https://travis-ci.org/heropunch/validate-email.svg
