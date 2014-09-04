@@ -23,22 +23,20 @@ from validate_email_address import validate_email
 
 class ValidationTest(TestCase):
     @staticmethod
-    def gen_valid(x=0, y=100):
-        def _gen_id(size=6, chars=''.join([string.ascii_letters, string.digits,
-                                           '_', '-', '.', '+', ' '])):
+    def gen_valid(x=1, y=20):
+        def _gen_id(size=6, chars=''.join([string.ascii_letters, string.digits])):
             return ''.join(choice(chars) for _ in range(size))
         return _gen_id(randrange(x, y))
 
     @staticmethod
-    def gen_invalid(x=0, y=100):
-        def _gen_id(size=6, chars=''.join([string.ascii_letters, string.digits,
-                                           '_', '-', '.', '+', ' ', '&', '$', '#'])):
+    def gen_invalid(x=1, y=20):
+        def _gen_id(size=6, chars=''.join(['&', '$', '#', '}', '{'])):
             return ''.join(choice(chars) for _ in range(size))
         return _gen_id(randrange(x, y))
 
     def setUp(self):
-        self.valid_addresses = ()
-        self.invalid_addresses = ()
+        self.valid_addresses = ("{}@sharklasers.com".format(self.gen_valid()) for _ in range(10))
+        self.invalid_addresses = (self.gen_invalid() for _ in range(10))
 
     def test_re_validation_valid(self):
         for email_address in self.valid_addresses:
