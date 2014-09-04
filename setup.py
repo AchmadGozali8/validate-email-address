@@ -3,7 +3,7 @@
 from setuptools import setup
 
 setup(name='validate-email-address',
-      version='1.2',
+      version='1',
       download_url='https://github.com/heropunch/validate-email-address.git',
       py_modules=('validate_email_address',),
       author='Carlos Killpack',
