@@ -49,19 +49,35 @@ class ValidationTest(TestCase):
     def test_mx_validation_valid(self):
         self.assertIsNotNone(DNS, 'PyDNS must be installed to run this test!')
         for email_address in self.valid_addresses:
-            self.assertTrue(bool(validate_email(email_address, check_mx=True, verify=False)))
+            result = validate_email(email_address, check_mx=True, verify=False)
+            if result is None:
+                pass
+            else:
+                self.assertTrue(result)
 
     def test_mx_validation_invalid(self):
         self.assertIsNotNone(DNS, 'PyDNS must be installed to run this test!')
         for email_address in self.invalid_addresses:
-            self.assertFalse(bool(validate_email(email_address, check_mx=True, verify=False)))
+            result = validate_email(email_address, check_mx=True, verify=False)
+            if result is None:
+                pass
+            else:
+                self.assertFalse(result)
 
     def test_smtp_validation_valid(self):
         self.assertIsNotNone(DNS, 'PyDNS must be installed to run this test!')
         for email_address in self.valid_addresses:
-            self.assertTrue(bool(validate_email(email_address, check_mx=True, verify=True)))
+            result = validate_email(email_address, check_mx=True, verify=True)
+            if result is None:
+                pass
+            else:
+                self.assertTrue(result)
 
     def test_smtp_validation_invalid(self):
         self.assertIsNotNone(DNS, 'PyDNS must be installed to run this test!')
         for email_address in self.invalid_addresses:
-            self.assertFalse(bool(validate_email(email_address, check_mx=True, verify=True)))
+            result = validate_email(email_address, check_mx=True, verify=True)
+            if result is None:
+                pass
+            else:
+                self.assertFalse(result)
