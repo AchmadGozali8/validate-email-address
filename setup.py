@@ -5,7 +5,7 @@ from setuptools import setup
 setup(name='validate-email-address',
       version='1',
       download_url='https://github.com/heropunch/validate-email-address.git',
-      py_modules=('validate_email_address',),
+      py_modules=('validate_email_address', ),
       author='Carlos Killpack',
       author_email='carlos.killpack@rocketmail.com',
       description='Verify if an email address is valid and really exists.',

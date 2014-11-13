@@ -19,9 +19,12 @@ First, you must do::
 Extra
 -----
 
-For check the domain mx and verify email exits you must have the `pyDNS` package installed::
+To check that the domain mx and email address exist you must have the `pyDNS` package installed::
 
-    pip install pyDNS
+    # Python 2.x
+    pip install Py3DNS
+    # Python 3.x
+    pip install Py3DNS
 
 
 USAGE
@@ -29,7 +32,7 @@ USAGE
 
 Basic usage::
 
-    >>> from validate_email_address import validate_email
+    >>> from validate_email import validate_email
     >>> validate_email('example@example.com')
     True
 
@@ -39,7 +42,7 @@ Checking domain has SMTP Server
 
 Check if the host has SMTP Server::
 
-    >>> from validate_email_address import validate_email
+    >>> from validate_email import validate_email
     >>> validate_email('example@sharklasers.com', check_mx=True)
     True
 
@@ -49,7 +52,7 @@ Verify email exists
 
 Check if the host has SMTP Server and the email really exists::
 
-    >>> from validate_email_address import validate_email
+    >>> from validate_email import validate_email
     >>> validate_email('example@sharklasers.com', verify=True)
     True
 
