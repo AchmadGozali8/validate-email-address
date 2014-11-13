@@ -18,7 +18,7 @@ except ImportError:
     class ServerError(Exception):
         pass
 
-from validate_email_address import validate_email
+from validate_email import validate_email
 
 
 class ValidationTest(TestCase):
