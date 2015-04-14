@@ -1,4 +1,4 @@
-|build|
+|test| |cover|
 
 ======================
 validate-email-address
@@ -57,5 +57,7 @@ Check if the host has SMTP Server and the email really exists::
     True
 
 
-.. |build| image:: https://travis-ci.org/zulumarketing/validate-email-address.svg?branch=master
+.. |test| image:: https://travis-ci.org/zulumarketing/validate-email-address.svg?branch=master
    :target: https://travis-ci.org/zulumarketing/validate-email-address
+.. |cover| image:: https://coveralls.io/repos/zulumarketing/validate-email-address/badge.svg
+   :target: https://coveralls.io/r/zulumarketing/validate-email-address
