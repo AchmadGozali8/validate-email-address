@@ -57,5 +57,5 @@ Check if the host has SMTP Server and the email really exists::
     True
 
 
-.. |build| .. image:: https://travis-ci.org/zulumarketing/validate-email-address.svg?branch=master
+.. |build| image:: https://travis-ci.org/zulumarketing/validate-email-address.svg?branch=master
    :target: https://travis-ci.org/zulumarketing/validate-email-address
