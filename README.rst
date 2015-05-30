@@ -4,7 +4,7 @@
 validate-email-address
 ======================
 
-`validate-email-address` is a package for Python that check if an email is valid, properly formatted and really exists.
+`validate-email-address` is a package for Python that check if an email is valid, properly formatted and (optionally) really exists.
 
 
 
@@ -36,6 +36,8 @@ Basic usage::
     >>> validate_email('example@example.com')
     True
 
+Note that this function call *only* verifies that the string matches RFC 2822, *not* that the
+email exists or is deliverable.
 
 Checking domain has SMTP Server
 -------------------------------
