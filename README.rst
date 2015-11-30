@@ -61,5 +61,5 @@ Check if the host has SMTP Server and the email really exists::
 
 .. |test| image:: https://travis-ci.org/heropunch/validate-email-address.svg?branch=master
    :target: https://travis-ci.org/heropunch/validate-email-address
-.. |cover| image:: https://coveralls.io/repos/heropunch/validate-email-address/badge.svg
-   :target: https://coveralls.io/r/heropunch/validate-email-address
+.. |cover| image:: https://coveralls.io/repos/heropunch/validate-email-address/badge.svg?branch=master&service=github
+   :target: https://coveralls.io/github/heropunch/validate-email-address?branch=master 
