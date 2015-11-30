@@ -5,16 +5,20 @@ validate-email
 
 RFC 2822 - style email validation for Python
 
+(c) 2015 Carlos Killpack <carlos@infinite.ai>
 (c) 2012 Syrus Akbary <me@syrusakbary.com>
-Extended from (c) 2011 Noel Bush <noel@aitools.org> for support of mx and user check
+Extended from (c) 2011 Noel Bush <noel@aitools.org> for support
+of mx and user check
 
 This code is made available to you under the GNU LGPLv3.
 
-This module provides a single method, valid_email(), which returns True or False to indicate
-whether a given address is valid according to the 'addr-spec' part of the specification given in RFC
-2822.  Ideally, we would like to find this in some other library, already thoroughly tested and
-well-maintained.  The standard Python library email.utils contains a parse_addr() function, but it
-is not sufficient to detect many malformed addresses.
+This module provides a single method, `validate_email()`, which
+returns True or False to indicate whether a given address is
+valid according to the 'addr-spec' part of the specification
+given in RFC 2822. Ideally, we would like to find this in some
+other library, already thoroughly tested and well-maintained.
+The standard Python library email.utils contains a `parse_addr()`
+function, but it is not sufficient to detect many malformed addresses.
 
 This implementation aims to be faithful to the RFC, with the
 exception of a circular definition (see comments below), and
@@ -131,8 +135,9 @@ def check_mx_record(email, verify=False, smtp_timeout=10):
     :return: bool or None
     """
     if not DNS:
-        raise Exception('For check the mx records or check if the email exists you must'
-                        ' have installed pyDNS python package')
+        raise Exception('To check the mx records or to check if the '
+                        'email address exists you must have installed '
+                        'the pyDNS python package')
     hostname = email[email.find('@') + 1:]
     mx_hosts = get_mx_ip(hostname)
     if mx_hosts is None:
